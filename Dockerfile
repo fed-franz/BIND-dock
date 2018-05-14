@@ -1,10 +1,10 @@
-# btc-dns-box docker image
+# BIND DNS Server docker image
 
 FROM ubuntu:latest
 
 # Install requirements + utilities
 RUN apt-get update \
- && apt-get install --yes bind9 bind9utils rsyslog tcpdump
+ && apt-get install --yes bind9 bind9utils rsyslog tcpdump dnsutils
 
 RUN mkdir /var/log/named \
 && chown -R bind:root /var/log/named \
