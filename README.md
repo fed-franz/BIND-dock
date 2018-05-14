@@ -1,5 +1,9 @@
 # BIND-dock
-Generic BIND server docker container
+Generic BIND server docker container.
+
+This container is meant for testing purposes and it is supposed to be configured as needed.
+
+Default config answers requests for www.domain.com with the IP 1.2.3.4
 
 ## Set-up
 ```sh
@@ -20,12 +24,26 @@ Name:	www.domain.com
 Address: 1.2.3.4
 >
 ```
-## Interactive Mode
-To enter the docker container:
+## MAN
+* Enter the container shell:
 ```sh
 $ docker attach binddock
-root@21eba089c6e5:~#
+root@a1eba089c6e5:~#
 ```
 
-To exit the container (without killing the process), press:
-`'Ctrl+p`, followed by `Ctrl+q`
+* Exit the container (without killing the process):<br/>
+Press `'Ctrl+p`, followed by `Ctrl+q`
+
+* Terminate the container:
+```sh
+$ docker kill binddock
+```
+* Restart the container:
+```sh
+$ docker start binddock
+```
+
+* Remove the container:
+```sh
+$ docker kill binddock
+```
